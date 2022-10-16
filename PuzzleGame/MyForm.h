@@ -1,5 +1,5 @@
 #pragma once
-
+#include <vector>
 namespace PuzzleGame {
 
 	using namespace System;
@@ -63,8 +63,8 @@ namespace PuzzleGame {
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Panel^ panel3;
-	private: System::Windows::Forms::Panel^ panel4;
+
+
 	private: System::Windows::Forms::Button^ button25;
 
 
@@ -117,6 +117,8 @@ namespace PuzzleGame {
 private: System::Windows::Forms::Button^ button28;
 private: System::Windows::Forms::Button^ button27;
 private: System::Windows::Forms::Button^ button26;
+private: System::Windows::Forms::Panel^ panel3;
+private: System::Windows::Forms::Button^ button31;
 
 	protected:
 
@@ -134,6 +136,9 @@ private: System::Windows::Forms::Button^ button26;
 		void InitializeComponent(void)
 		{
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->button28 = (gcnew System::Windows::Forms::Button());
+			this->button27 = (gcnew System::Windows::Forms::Button());
+			this->button26 = (gcnew System::Windows::Forms::Button());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->button25 = (gcnew System::Windows::Forms::Button());
 			this->button24 = (gcnew System::Windows::Forms::Button());
@@ -161,12 +166,10 @@ private: System::Windows::Forms::Button^ button26;
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
-			this->panel4 = (gcnew System::Windows::Forms::Panel());
-			this->button26 = (gcnew System::Windows::Forms::Button());
-			this->button27 = (gcnew System::Windows::Forms::Button());
-			this->button28 = (gcnew System::Windows::Forms::Button());
+			this->button31 = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
+			this->panel3->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// panel1
@@ -175,11 +178,44 @@ private: System::Windows::Forms::Button^ button26;
 			this->panel1->Controls->Add(this->button28);
 			this->panel1->Controls->Add(this->button27);
 			this->panel1->Controls->Add(this->button26);
-			this->panel1->Location = System::Drawing::Point(12, 12);
+			this->panel1->Location = System::Drawing::Point(12, 86);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1328, 100);
+			this->panel1->Size = System::Drawing::Size(663, 100);
 			this->panel1->TabIndex = 0;
 			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MyForm::panel1_Paint);
+			// 
+			// button28
+			// 
+			this->button28->BackColor = System::Drawing::Color::Green;
+			this->button28->Location = System::Drawing::Point(519, 0);
+			this->button28->Name = L"button28";
+			this->button28->Size = System::Drawing::Size(99, 89);
+			this->button28->TabIndex = 24;
+			this->button28->UseVisualStyleBackColor = false;
+			// 
+			// button27
+			// 
+			this->button27->BackColor = System::Drawing::Color::Blue;
+			this->button27->FlatAppearance->BorderColor = System::Drawing::Color::Black;
+			this->button27->FlatAppearance->BorderSize = 100;
+			this->button27->FlatAppearance->MouseDownBackColor = System::Drawing::Color::IndianRed;
+			this->button27->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->button27->ForeColor = System::Drawing::SystemColors::ButtonShadow;
+			this->button27->Location = System::Drawing::Point(288, 3);
+			this->button27->Name = L"button27";
+			this->button27->Size = System::Drawing::Size(99, 89);
+			this->button27->TabIndex = 24;
+			this->button27->UseVisualStyleBackColor = false;
+			// 
+			// button26
+			// 
+			this->button26->BackColor = System::Drawing::Color::Red;
+			this->button26->Location = System::Drawing::Point(54, 3);
+			this->button26->Name = L"button26";
+			this->button26->Size = System::Drawing::Size(99, 89);
+			this->button26->TabIndex = 24;
+			this->button26->UseVisualStyleBackColor = false;
 			// 
 			// panel2
 			// 
@@ -209,7 +245,7 @@ private: System::Windows::Forms::Button^ button26;
 			this->panel2->Controls->Add(this->button3);
 			this->panel2->Controls->Add(this->button2);
 			this->panel2->Controls->Add(this->button1);
-			this->panel2->Location = System::Drawing::Point(12, 118);
+			this->panel2->Location = System::Drawing::Point(12, 201);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(663, 534);
 			this->panel2->TabIndex = 1;
@@ -217,6 +253,8 @@ private: System::Windows::Forms::Button^ button26;
 			// button25
 			// 
 			this->button25->BackColor = System::Drawing::Color::Green;
+			this->button25->FlatAppearance->BorderColor = System::Drawing::Color::Yellow;
+			this->button25->FlatAppearance->BorderSize = 3;
 			this->button25->Location = System::Drawing::Point(519, 402);
 			this->button25->Name = L"button25";
 			this->button25->Size = System::Drawing::Size(99, 89);
@@ -236,6 +274,8 @@ private: System::Windows::Forms::Button^ button26;
 			// button23
 			// 
 			this->button23->BackColor = System::Drawing::Color::Blue;
+			this->button23->FlatAppearance->BorderColor = System::Drawing::Color::Yellow;
+			this->button23->FlatAppearance->BorderSize = 3;
 			this->button23->Location = System::Drawing::Point(288, 402);
 			this->button23->Name = L"button23";
 			this->button23->Size = System::Drawing::Size(99, 89);
@@ -255,6 +295,8 @@ private: System::Windows::Forms::Button^ button26;
 			// button21
 			// 
 			this->button21->BackColor = System::Drawing::Color::Red;
+			this->button21->FlatAppearance->BorderColor = System::Drawing::Color::Yellow;
+			this->button21->FlatAppearance->BorderSize = 3;
 			this->button21->Location = System::Drawing::Point(54, 402);
 			this->button21->Name = L"button21";
 			this->button21->Size = System::Drawing::Size(99, 89);
@@ -265,6 +307,8 @@ private: System::Windows::Forms::Button^ button26;
 			// button20
 			// 
 			this->button20->BackColor = System::Drawing::Color::Green;
+			this->button20->FlatAppearance->BorderColor = System::Drawing::Color::Yellow;
+			this->button20->FlatAppearance->BorderSize = 3;
 			this->button20->Location = System::Drawing::Point(519, 307);
 			this->button20->Name = L"button20";
 			this->button20->Size = System::Drawing::Size(99, 89);
@@ -275,6 +319,8 @@ private: System::Windows::Forms::Button^ button26;
 			// button19
 			// 
 			this->button19->BackColor = System::Drawing::Color::White;
+			this->button19->FlatAppearance->BorderColor = System::Drawing::Color::Yellow;
+			this->button19->FlatAppearance->BorderSize = 3;
 			this->button19->Location = System::Drawing::Point(403, 307);
 			this->button19->Name = L"button19";
 			this->button19->Size = System::Drawing::Size(99, 89);
@@ -285,6 +331,8 @@ private: System::Windows::Forms::Button^ button26;
 			// button18
 			// 
 			this->button18->BackColor = System::Drawing::Color::Blue;
+			this->button18->FlatAppearance->BorderColor = System::Drawing::Color::Yellow;
+			this->button18->FlatAppearance->BorderSize = 3;
 			this->button18->Location = System::Drawing::Point(288, 307);
 			this->button18->Name = L"button18";
 			this->button18->Size = System::Drawing::Size(99, 89);
@@ -295,6 +343,8 @@ private: System::Windows::Forms::Button^ button26;
 			// button17
 			// 
 			this->button17->BackColor = System::Drawing::Color::White;
+			this->button17->FlatAppearance->BorderColor = System::Drawing::Color::Yellow;
+			this->button17->FlatAppearance->BorderSize = 3;
 			this->button17->Location = System::Drawing::Point(169, 307);
 			this->button17->Name = L"button17";
 			this->button17->Size = System::Drawing::Size(99, 89);
@@ -305,6 +355,8 @@ private: System::Windows::Forms::Button^ button26;
 			// button16
 			// 
 			this->button16->BackColor = System::Drawing::Color::Red;
+			this->button16->FlatAppearance->BorderColor = System::Drawing::Color::Yellow;
+			this->button16->FlatAppearance->BorderSize = 3;
 			this->button16->Location = System::Drawing::Point(54, 307);
 			this->button16->Name = L"button16";
 			this->button16->Size = System::Drawing::Size(99, 89);
@@ -315,6 +367,8 @@ private: System::Windows::Forms::Button^ button26;
 			// button15
 			// 
 			this->button15->BackColor = System::Drawing::Color::Green;
+			this->button15->FlatAppearance->BorderColor = System::Drawing::Color::Yellow;
+			this->button15->FlatAppearance->BorderSize = 3;
 			this->button15->Location = System::Drawing::Point(519, 212);
 			this->button15->Name = L"button15";
 			this->button15->Size = System::Drawing::Size(99, 89);
@@ -334,6 +388,8 @@ private: System::Windows::Forms::Button^ button26;
 			// button10
 			// 
 			this->button10->BackColor = System::Drawing::Color::Green;
+			this->button10->FlatAppearance->BorderColor = System::Drawing::Color::Yellow;
+			this->button10->FlatAppearance->BorderSize = 3;
 			this->button10->Location = System::Drawing::Point(519, 117);
 			this->button10->Name = L"button10";
 			this->button10->Size = System::Drawing::Size(99, 89);
@@ -344,6 +400,8 @@ private: System::Windows::Forms::Button^ button26;
 			// button9
 			// 
 			this->button9->BackColor = System::Drawing::Color::White;
+			this->button9->FlatAppearance->BorderColor = System::Drawing::Color::Yellow;
+			this->button9->FlatAppearance->BorderSize = 3;
 			this->button9->Location = System::Drawing::Point(403, 117);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(99, 89);
@@ -354,6 +412,8 @@ private: System::Windows::Forms::Button^ button26;
 			// button5
 			// 
 			this->button5->BackColor = System::Drawing::Color::Green;
+			this->button5->FlatAppearance->BorderColor = System::Drawing::Color::Yellow;
+			this->button5->FlatAppearance->BorderSize = 3;
 			this->button5->Location = System::Drawing::Point(519, 22);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(99, 89);
@@ -373,6 +433,8 @@ private: System::Windows::Forms::Button^ button26;
 			// button13
 			// 
 			this->button13->BackColor = System::Drawing::Color::Blue;
+			this->button13->FlatAppearance->BorderColor = System::Drawing::Color::Yellow;
+			this->button13->FlatAppearance->BorderSize = 3;
 			this->button13->Location = System::Drawing::Point(288, 212);
 			this->button13->Name = L"button13";
 			this->button13->Size = System::Drawing::Size(99, 89);
@@ -392,6 +454,8 @@ private: System::Windows::Forms::Button^ button26;
 			// button11
 			// 
 			this->button11->BackColor = System::Drawing::Color::Red;
+			this->button11->FlatAppearance->BorderColor = System::Drawing::Color::Yellow;
+			this->button11->FlatAppearance->BorderSize = 3;
 			this->button11->Location = System::Drawing::Point(54, 212);
 			this->button11->Name = L"button11";
 			this->button11->Size = System::Drawing::Size(99, 89);
@@ -402,6 +466,8 @@ private: System::Windows::Forms::Button^ button26;
 			// button8
 			// 
 			this->button8->BackColor = System::Drawing::Color::Blue;
+			this->button8->FlatAppearance->BorderColor = System::Drawing::Color::Yellow;
+			this->button8->FlatAppearance->BorderSize = 3;
 			this->button8->Location = System::Drawing::Point(288, 117);
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(99, 89);
@@ -411,7 +477,9 @@ private: System::Windows::Forms::Button^ button26;
 			// 
 			// button7
 			// 
-			this->button7->BackColor = System::Drawing::Color::Red;
+			this->button7->BackColor = System::Drawing::Color::White;
+			this->button7->FlatAppearance->BorderColor = System::Drawing::Color::Yellow;
+			this->button7->FlatAppearance->BorderSize = 3;
 			this->button7->Location = System::Drawing::Point(169, 117);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(99, 89);
@@ -421,8 +489,10 @@ private: System::Windows::Forms::Button^ button26;
 			// 
 			// button6
 			// 
-			this->button6->BackColor = System::Drawing::Color::White;
-			this->button6->ForeColor = System::Drawing::SystemColors::ButtonShadow;
+			this->button6->BackColor = System::Drawing::Color::Red;
+			this->button6->FlatAppearance->BorderColor = System::Drawing::Color::Yellow;
+			this->button6->FlatAppearance->BorderSize = 3;
+			this->button6->ForeColor = System::Drawing::Color::Black;
 			this->button6->Location = System::Drawing::Point(54, 117);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(99, 89);
@@ -433,6 +503,8 @@ private: System::Windows::Forms::Button^ button26;
 			// button3
 			// 
 			this->button3->BackColor = System::Drawing::Color::Blue;
+			this->button3->FlatAppearance->BorderColor = System::Drawing::Color::Yellow;
+			this->button3->FlatAppearance->BorderSize = 3;
 			this->button3->Location = System::Drawing::Point(288, 22);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(99, 89);
@@ -443,7 +515,9 @@ private: System::Windows::Forms::Button^ button26;
 			// button2
 			// 
 			this->button2->BackColor = System::Drawing::Color::Black;
-			this->button2->Location = System::Drawing::Point(169, 22);
+			this->button2->FlatAppearance->BorderColor = System::Drawing::Color::Yellow;
+			this->button2->FlatAppearance->BorderSize = 3;
+			this->button2->Location = System::Drawing::Point(168, 22);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(99, 89);
 			this->button2->TabIndex = 1;
@@ -452,6 +526,8 @@ private: System::Windows::Forms::Button^ button26;
 			// button1
 			// 
 			this->button1->BackColor = System::Drawing::Color::Red;
+			this->button1->FlatAppearance->BorderColor = System::Drawing::Color::Yellow;
+			this->button1->FlatAppearance->BorderSize = 3;
 			this->button1->Location = System::Drawing::Point(54, 22);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(99, 89);
@@ -462,60 +538,40 @@ private: System::Windows::Forms::Button^ button26;
 			// panel3
 			// 
 			this->panel3->BackColor = System::Drawing::Color::Teal;
-			this->panel3->Location = System::Drawing::Point(681, 118);
+			this->panel3->Controls->Add(this->button31);
+			this->panel3->Location = System::Drawing::Point(15, 8);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(321, 534);
-			this->panel3->TabIndex = 2;
+			this->panel3->Size = System::Drawing::Size(663, 72);
+			this->panel3->TabIndex = 25;
 			// 
-			// panel4
+			// button31
 			// 
-			this->panel4->BackColor = System::Drawing::Color::Teal;
-			this->panel4->Location = System::Drawing::Point(1019, 118);
-			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(321, 534);
-			this->panel4->TabIndex = 3;
-			// 
-			// button26
-			// 
-			this->button26->BackColor = System::Drawing::Color::Red;
-			this->button26->Location = System::Drawing::Point(54, 3);
-			this->button26->Name = L"button26";
-			this->button26->Size = System::Drawing::Size(99, 89);
-			this->button26->TabIndex = 24;
-			this->button26->UseVisualStyleBackColor = false;
-			// 
-			// button27
-			// 
-			this->button27->BackColor = System::Drawing::Color::Blue;
-			this->button27->Location = System::Drawing::Point(288, 3);
-			this->button27->Name = L"button27";
-			this->button27->Size = System::Drawing::Size(99, 89);
-			this->button27->TabIndex = 24;
-			this->button27->UseVisualStyleBackColor = false;
-			// 
-			// button28
-			// 
-			this->button28->BackColor = System::Drawing::Color::Green;
-			this->button28->Location = System::Drawing::Point(519, 0);
-			this->button28->Name = L"button28";
-			this->button28->Size = System::Drawing::Size(99, 89);
-			this->button28->TabIndex = 24;
-			this->button28->UseVisualStyleBackColor = false;
+			this->button31->BackColor = System::Drawing::Color::Blue;
+			this->button31->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button31->Location = System::Drawing::Point(244, 12);
+			this->button31->Name = L"button31";
+			this->button31->Size = System::Drawing::Size(181, 50);
+			this->button31->TabIndex = 24;
+			this->button31->Text = L"Skip puzzle";
+			this->button31->UseVisualStyleBackColor = false;
+			this->button31->Click += gcnew System::EventHandler(this, &MyForm::button31_Click);
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1352, 749);
-			this->Controls->Add(this->panel4);
+			this->ClientSize = System::Drawing::Size(687, 749);
 			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"PuzzleGame";
+			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->panel1->ResumeLayout(false);
 			this->panel2->ResumeLayout(false);
+			this->panel3->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
@@ -523,12 +579,41 @@ private: System::Windows::Forms::Button^ button26;
 	private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 	}
 
+		   public:System::Void Shuffle() {
+			   array<Button^>^ bnum = gcnew array<Button^>(15) {  button1, button3, button5, button6, button8, button10, button11, button13, button15, button16,  button18,  button20, button21, button23, button25 };
+			   Random^ rnd = gcnew Random();
+			   int red = 5, blue = 5, green = 5;
+			   int color = 0;
+			   int index = 0;
+			   while (red>0 || blue>0 || green>0)
+			   {
+				   color = rnd->Next(3);
+				   if (color == 0 && red != 0) {
+					   bnum[index]->BackColor = Color::Red;
+					   red--;
+					   index++;
+				   }
+				   if (color == 1 && blue != 0) {
+					   bnum[index]->BackColor = Color::Blue;
+					   blue--;
+					   index++;
+				   }
+				   if (color == 2 && green != 0) {
+					   bnum[index]->BackColor = Color::Green;
+					   green--;
+					   index++;
+				   }
+			   }
+			   
 
+			   
+		   }
 		   public:System::Void SolutionChecker() {
 			   if (button1->BackColor == Color::Red && button6->BackColor == Color::Red && button11->BackColor == Color::Red && button16->BackColor == Color::Red && button21->BackColor == Color::Red &&
 				   button3->BackColor == Color::Blue && button8->BackColor == Color::Blue && button13->BackColor == Color::Blue && button18->BackColor == Color::Blue && button23->BackColor == Color::Blue &&
 				   button5->BackColor == Color::Green && button10->BackColor == Color::Green && button15->BackColor == Color::Green && button20->BackColor == Color::Green && button25->BackColor == Color::Green) {
-				   MessageBox::Show("Ты победила лю!");
+				   MessageBox::Show("Победа!");
+				
 			   }
 
 		   }
@@ -536,255 +621,179 @@ private: System::Windows::Forms::Button^ button26;
 		   public:System::Void SpotChecker(Button ^b1) {
 			   b1->BackColor = buttonFirst->BackColor;
 			   buttonFirst->BackColor=Color::White;
+			   buttonFirst->FlatStyle = FlatStyle::Standard;
 			   buttonFirst = nullptr;
 			   SolutionChecker();
 			   
 		   }
-			
+				 public:System::Void CheckButton(Button^ b) {
+					 if (buttonFirst == b)
+					 {
+						 buttonFirst = nullptr; b->FlatStyle = FlatStyle::Standard;  return;
+						 
+					 }
+					 if (b->BackColor != Color::White && buttonFirst == nullptr) {
+						 buttonFirst = b;
+						 b->FlatStyle = FlatStyle::Flat;
+						 return;
+					 }
+				 }
 	private:System::Void btnNum1_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (buttonFirst == button1)
-			return;
-		if (button1->BackColor != Color::White && buttonFirst == nullptr) {
-			buttonFirst = button1;
-			return;
-		}
-		if (buttonFirst == button6) {
+		CheckButton(button1);
+		if (buttonFirst == button6&& button1->BackColor == Color::White) {
 
 			SpotChecker(button1);
 		}
 	}
 		   private:System::Void btnNum3_Click(System::Object^ sender, System::EventArgs^ e) {
-			   if (buttonFirst == button3)
-				   return;
-			   if (button3->BackColor != Color::White && buttonFirst == nullptr) {
-				   buttonFirst = button3;
-				   return;
-			   }
-			   if (buttonFirst == button8) {
+			   CheckButton(button3);
+			   if (buttonFirst == button8 && button3->BackColor == Color::White) {
 
 				   SpotChecker(button3);
 			   }
 		   }
 				  private:System::Void btnNum5_Click(System::Object^ sender, System::EventArgs^ e) {
-					  if (buttonFirst == button5)
-						  return;
-					  if (button5->BackColor != Color::White && buttonFirst == nullptr) {
-						  buttonFirst = button5;
-						  return;
-					  }
-					  if (buttonFirst == button10) {
+					  CheckButton(button5);
+					  if (buttonFirst == button10 && button5->BackColor == Color::White) {
 
 						  SpotChecker(button5);
 					  }
 				  }
 			
 		   private:System::Void btnNum6_Click(System::Object ^ sender, System::EventArgs ^ e) {
-			   if (buttonFirst == button6)
-				   return;
-			   if (button6->BackColor != Color::White && buttonFirst == nullptr) {
-				   buttonFirst = button6;
-				   return;
-		   }
-			   if (buttonFirst == button7 || buttonFirst == button1 || buttonFirst == button11) {
+			   CheckButton(button6);
+			   if ((buttonFirst == button7 || buttonFirst == button1 || buttonFirst == button11) && button6->BackColor == Color::White) {
 				   
 					   SpotChecker(button6);
 			   }
+			 
 
 		   }
 			private:System::Void btnNum7_Click(System::Object^ sender, System::EventArgs^ e) {
-				if (buttonFirst == button7)
-					return;
-				if (button7->BackColor != Color::White && buttonFirst == nullptr) {
-					buttonFirst = button7;
-					return;
-				}
-				if (buttonFirst == button6 || buttonFirst == button8 ) {
+				CheckButton(button7);
+				if ((buttonFirst == button6 || buttonFirst == button8 )&& button7->BackColor == Color::White) {
 
 					SpotChecker(button7);
 				}
 
 			 }
 			private:System::Void btnNum8_Click(System::Object^ sender, System::EventArgs^ e) {
-				if (buttonFirst == button8)
-					return;
-				if (button8->BackColor != Color::White && buttonFirst == nullptr) {
-					buttonFirst = button8;
-					return;
-				}
-				if (buttonFirst == button7 || buttonFirst == button9 || buttonFirst == button3 || buttonFirst == button13) {
+				CheckButton(button8);
+				if ((buttonFirst == button7 || buttonFirst == button9 || buttonFirst == button3 || buttonFirst == button13) && button8->BackColor == Color::White) {
 
 					SpotChecker(button8);
 				}
 			}
 		  private:System::Void btnNum9_Click(System::Object^ sender, System::EventArgs^ e) {
-			  if (buttonFirst == button9)
-				  return;
-			  if (button9->BackColor != Color::White && buttonFirst == nullptr) {
-				  buttonFirst = button9;
-				  return;
-			  }
-			  if (buttonFirst == button8 || buttonFirst == button10) {
+			  CheckButton(button9);
+			  if ((buttonFirst == button8 || buttonFirst == button10 )&& button9->BackColor == Color::White) {
 
 				  SpotChecker(button9);
 			  }
 
 		  }
 			private:System::Void btnNum10_Click(System::Object^ sender, System::EventArgs^ e) {
-				if (buttonFirst == button10)
-					return;
-				if (button10->BackColor != Color::White && buttonFirst == nullptr) {
-					buttonFirst = button10;
-					return;
-				}
-				if (buttonFirst == button5 || buttonFirst == button9 || buttonFirst == button15) {
+				CheckButton(button10);
+				if ((buttonFirst == button5 || buttonFirst == button9 || buttonFirst == button15 )&& button10->BackColor == Color::White) {
 
 					SpotChecker(button10);
 				}
 
 			}
 			private:System::Void btnNum11_Click(System::Object^ sender, System::EventArgs^ e) {
-				if (buttonFirst == button11)
-					return;
-				if (button11->BackColor != Color::White && buttonFirst == nullptr) {
-					buttonFirst = button11;
-					return;
-				}
-				if (buttonFirst == button6 || buttonFirst == button16 ) {
+				CheckButton(button11);
+				if ((buttonFirst == button6 || buttonFirst == button16) && button11->BackColor == Color::White) {
 
 					SpotChecker(button11);
 				}
 
 			}
 			private:System::Void btnNum13_Click(System::Object^ sender, System::EventArgs^ e) {
-				if (buttonFirst == button13)
-					return;
-				if (button13->BackColor != Color::White && buttonFirst == nullptr) {
-					buttonFirst = button13;
-					return;
-				}
-				if (buttonFirst == button8 || buttonFirst == button18 ) {
+				CheckButton(button13);
+				if ((buttonFirst == button8 || buttonFirst == button18) && button13->BackColor == Color::White) {
 
 					SpotChecker(button13);
 				}
 
 			}
 			private:System::Void btnNum15_Click(System::Object^ sender, System::EventArgs^ e) {
-				if (buttonFirst == button15)
-					return;
-				if (button15->BackColor != Color::White && buttonFirst == nullptr) {
-					buttonFirst = button15;
-					return;
-				}
-				if (buttonFirst == button10 || buttonFirst == button20) {
+				CheckButton(button15);
+				if ((buttonFirst == button10 || buttonFirst == button20 )&& button15->BackColor == Color::White) {
 
 					SpotChecker(button15);
 				}
 
 			}
 			private:System::Void btnNum16_Click(System::Object^ sender, System::EventArgs^ e) {
-				if (buttonFirst == button16)
-					return;
-				if (button16->BackColor != Color::White && buttonFirst == nullptr) {
-					buttonFirst = button16;
-					return;
-				}
-				if (buttonFirst == button11 || buttonFirst == button21 || buttonFirst == button17) {
+				CheckButton(button16);
+				if ((buttonFirst == button11 || buttonFirst == button21 || buttonFirst == button17 )&& button16->BackColor == Color::White) {
 
 					SpotChecker(button16);
 				}
 
 			}
 			private:System::Void btnNum17_Click(System::Object^ sender, System::EventArgs^ e) {
-				if (buttonFirst == button17)
-					return;
-				if (button17->BackColor != Color::White && buttonFirst == nullptr) {
-					buttonFirst = button17;
-					return;
-				}
-				if (buttonFirst == button18 || buttonFirst == button16 ) {
+				CheckButton(button17);
+				
+				if ((buttonFirst == button18 || buttonFirst == button16 )&& button17->BackColor == Color::White) {
 
 					SpotChecker(button17);
 				}
 
 			}
 			private:System::Void btnNum18_Click(System::Object^ sender, System::EventArgs^ e) {
-				if (buttonFirst == button18)
-					return;
-				if (button18->BackColor != Color::White && buttonFirst == nullptr) {
-					buttonFirst = button18;
-					return;
-				}
-				if (buttonFirst == button17 || buttonFirst == button19 || buttonFirst == button13 || buttonFirst == button23) {
+				CheckButton(button18);
+				if ((buttonFirst == button17 || buttonFirst == button19 || buttonFirst == button13 || buttonFirst == button23) && button18->BackColor == Color::White) {
 
 					SpotChecker(button18);
 				}
 
 			}
 			private:System::Void btnNum19_Click(System::Object^ sender, System::EventArgs^ e) {
-				if (buttonFirst == button19)
-					return;
-				if (button19->BackColor != Color::White && buttonFirst == nullptr) {
-					buttonFirst = button19;
-					return;
-				}
-				if (buttonFirst == button18 || buttonFirst == button20) {
+				CheckButton(button19);
+				if ((buttonFirst == button18 || buttonFirst == button20 )&& button19->BackColor == Color::White) {
 
 					SpotChecker(button19);
 				}
 
 			}
 			private:System::Void btnNum20_Click(System::Object^ sender, System::EventArgs^ e) {
-				if (buttonFirst == button20)
-					return;
-				if (button20->BackColor != Color::White && buttonFirst == nullptr) {
-					buttonFirst = button20;
-					return;
-				}
-				if (buttonFirst == button15 || buttonFirst == button25 || buttonFirst == button19) {
+				CheckButton(button20);
+				if ((buttonFirst == button15 || buttonFirst == button25 || buttonFirst == button19) && button20->BackColor == Color::White) {
 
 					SpotChecker(button20);
 				}
 
 			}
 			private:System::Void btnNum21_Click(System::Object^ sender, System::EventArgs^ e) {
-				if (buttonFirst == button21)
-					return;
-				if (button21->BackColor != Color::White && buttonFirst == nullptr) {
-					buttonFirst = button21;
-					return;
-				}
-				if (buttonFirst == button16 ) {
+				CheckButton(button21);
+				if (buttonFirst == button16 && button21->BackColor == Color::White) {
 
 					SpotChecker(button21);
 				}
 
 			}
 			private:System::Void btnNum23_Click(System::Object^ sender, System::EventArgs^ e) {
-				if (buttonFirst == button23)
-					return;
-				if (button23->BackColor != Color::White && buttonFirst == nullptr) {
-					buttonFirst = button23;
-					return;
-				}
-				if (buttonFirst == button18) {
+				CheckButton(button23);
+				if (buttonFirst == button18 && button23->BackColor == Color::White) {
 
 					SpotChecker(button23);
 				}
 
 			}
 			private:System::Void btnNum25_Click(System::Object^ sender, System::EventArgs^ e) {
-				if (buttonFirst == button25)
-					return;
-				if (button25->BackColor != Color::White && buttonFirst == nullptr) {
-					buttonFirst = button25;
-					return;
-				}
-				if (buttonFirst == button20) {
+				CheckButton(button25);
+				if (buttonFirst == button20 && button25->BackColor == Color::White) {
 
 					SpotChecker(button25);
 				}
 
 			}
 	
+private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button31_Click(System::Object^ sender, System::EventArgs^ e) {
+	Shuffle();
+}
 };
 }
